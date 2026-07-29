@@ -1,0 +1,10 @@
+import canonicalLaneMathlib.AdmissibleClass
+
+namespace HautevilleHouse
+namespace CellBiologyLipidDropletsLemmaCanonicalLaneLean
+
+definition cellBiologyLipidDropletsLemmaCanonicalLaneLean : String :=
+  "CellBiologyLipidDropletsLemmaCanonicalLaneLean"
+
+end CellBiologyLipidDropletsLemmaCanonicalLaneLean
+end HautevilleHouse

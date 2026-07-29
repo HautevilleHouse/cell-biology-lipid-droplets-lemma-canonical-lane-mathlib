@@ -1,0 +1,31 @@
+import canonicalLaneMathlib.AdmissibleClass
+import CellBiologyLipidDropletsLemmaCanonicalLaneLean.LipidDropletBiogenesis
+import CellBiologyLipidDropletsLemmaCanonicalLaneLean.LipidDropletProteome
+import CellBiologyLipidDropletsLemmaCanonicalLaneLean.LipidDropletMetabolism
+import CellBiologyLipidDropletsLemmaCanonicalLaneLean.LipidDropletDynamics
+import CellBiologyLipidDropletsLemmaCanonicalLaneLean.LipidDropletPathology
+
+namespace HautevilleHouse
+namespace CellBiologyLipidDropletsLemmaCanonicalLaneLean
+
+structure LipidDropletAdmittedObject where
+  biogenesisPackage : LipidDropletBiogenesisPackage
+  proteomePackage : LipidDropletProteomePackage
+  metabolismPackage : LipidDropletMetabolismPackage
+  dynamicsPackage : LipidDropletDynamicsPackage
+  pathologyPackage : LipidDropletPathologyPackage
+  biogenesisClosed : LipidDropletBiogenesisClosed biogenesisPackage
+  proteomeClosed : LipidDropletProteomeClosed proteomePackage
+  metabolismClosed : LipidDropletMetabolismClosed metabolismPackage
+  dynamicsClosed : LipidDropletDynamicsClosed dynamicsPackage
+  pathologyClosed : LipidDropletPathologyClosed pathologyPackage
+  conclusion : biogenesisClosed ∧ proteomeClosed ∧ metabolismClosed ∧ dynamicsClosed ∧ pathologyClosed
+
+structure LipidDropletAdmissibleClass where
+  object : LipidDropletAdmittedObject
+  endpointSatisfied : Prop
+  remainderRecorded : Prop
+  gateWitness : endpointSatisfied ∨ remainderRecorded
+
+end CellBiologyLipidDropletsLemmaCanonicalLaneLean
+end HautevilleHouse
